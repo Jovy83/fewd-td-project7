@@ -6,6 +6,7 @@ $wild-blue: #7479BA;
 $east-bay: #4C4D6F;
 $dark-gray: #B2B2B2;
 $dark-sea-green: #91C694;
+$active-green: #8DD490;
 
 $color-primary: $wild-blue;
 $color-secondary: $east-bay;
@@ -17,8 +18,8 @@ $btn-colors: (
 );
 
 // Font Stacks
-$font-url--google        : 'https://fonts.googleapis.com/css?family=Lato:300,400,700';
-$font-family--primary    : 'Lato', sans-serif;
+$font-url--google        : 'https://fonts.googleapis.com/css?family=Raleway:300,400,700';
+$font-family--primary    : 'Raleway', sans-serif;
 
 // Font size
 $size-primary-text: 1rem; // will be used by mostly everything
@@ -30,13 +31,15 @@ $size-tm-text: 0.9rem;
 $weight-thin: 300;
 $weight-thick: 700;
 
-
 // Layout
-$spacing-xsmall: 0.5rem;
+$spacing-extrasmall: 0.5rem;
 $spacing-small: 1rem;
 $spacing-medium: 2rem;
 $spacing-large: 3rem;
 $padding-button: 0.75rem;
+
+// Border
+$border-active-size: 0.35rem;
 
 // Maps //
 $screen-sizes: (

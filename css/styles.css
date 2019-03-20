@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
-#header .profile-div, #header .notification-and-profile-div {
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
+#navigation ul, #header .profile-div, #header .notification-and-profile-div {
   display: flex;
   flex-direction: row;
 }
@@ -433,7 +433,7 @@ a {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 h1,
@@ -473,6 +473,20 @@ p {
 
 .avatar {
   border-radius: 50%;
+}
+
+#navigation {
+  background: #4C4D6F;
+}
+#navigation ul {
+  justify-content: space-around;
+}
+#navigation ul li {
+  padding: 0.5rem;
+  border: 0.35rem solid transparent;
+}
+#navigation ul li.active {
+  border-bottom: 0.35rem solid #8DD490;
 }
 
 /*# sourceMappingURL=styles.css.map */

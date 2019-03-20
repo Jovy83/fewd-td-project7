@@ -1,0 +1,18 @@
+#navigation {
+  background: $color-secondary;
+
+  & ul {
+    @include flexy(row);
+    justify-content: space-around;
+
+    & li {
+      padding: $spacing-extrasmall;
+      border: $border-active-size solid transparent;
+
+      &.active {
+        border-bottom: $border-active-size solid $active-green;
+      }
+    }
+
+  }
+}
