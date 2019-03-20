@@ -1,0 +1,22 @@
+@mixin flexy($direction) {
+ @if $direction == row {
+   @extend %flex-row;
+ } @else if $direction == column {
+  @extend %flex-column;
+ }
+}
+
+// Media queries
+@mixin media-query($screen-size) {
+  $value: map-get($screen-sizes, $screen-size);
+
+  @if $value == null {
+    @error "`#{$screen-size}` is not a supported screen size.";
+  }
+
+  @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}

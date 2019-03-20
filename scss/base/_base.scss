@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: $font-family--primary;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}

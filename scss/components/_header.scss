@@ -1,0 +1,36 @@
+#header {
+  @include flexy(column);
+  align-items: center;
+  background: $color-primary;
+  padding: $spacing-small;
+
+  & h1 {
+    color: $white;
+    margin-bottom: $spacing-small;
+
+    & .thin {
+      font-weight: $weight-thin;
+    }
+
+    & .tm {
+      font-size: $size-tm-text;
+      vertical-align: top;
+    }
+  }
+
+  & .notification-and-profile-div {
+    @include flexy(row);
+    justify-content: space-between;
+    width: 95%;
+  }
+
+  & .profile-div {
+    @include flexy(row);
+    align-items: center;
+
+    & .username {
+      color: $white;
+      margin-left: $spacing-xsmall;
+    }
+  }
+}

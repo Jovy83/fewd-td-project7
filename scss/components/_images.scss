@@ -1,0 +1,11 @@
+svg {
+  @extend %icon;
+}
+
+img {
+  @extend %icon;
+}
+
+.avatar {
+  border-radius: 50%;
+}

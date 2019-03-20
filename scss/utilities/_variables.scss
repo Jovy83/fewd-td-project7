@@ -1,0 +1,46 @@
+// Descriptive Colors
+$white: #fff;
+$black: #000;
+$gray: #808080;
+$wild-blue: #7479BA;
+$east-bay: #4C4D6F;
+$dark-gray: #B2B2B2;
+$dark-sea-green: #91C694;
+
+$color-primary: $wild-blue;
+$color-secondary: $east-bay;
+$color-tertiary: $dark-sea-green;
+
+$btn-colors: (
+  default: $wild-blue,
+  cancel: $dark-gray,
+);
+
+// Font Stacks
+$font-url--google        : 'https://fonts.googleapis.com/css?family=Lato:300,400,700';
+$font-family--primary    : 'Lato', sans-serif;
+
+// Font size
+$size-primary-text: 1rem; // will be used by mostly everything
+$size-secondary-text: 1.3rem;
+$size-tertiary-text: 1.8rem;
+$size-tm-text: 0.9rem;
+
+// Font weight
+$weight-thin: 300;
+$weight-thick: 700;
+
+
+// Layout
+$spacing-xsmall: 0.5rem;
+$spacing-small: 1rem;
+$spacing-medium: 2rem;
+$spacing-large: 3rem;
+$padding-button: 0.75rem;
+
+// Maps //
+$screen-sizes: (
+'mobile': 320px,
+'tablet': 768px,
+'desktop': 1024px
+);
