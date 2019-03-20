@@ -1,0 +1,14 @@
+#main {
+  @extend %grid;
+  padding: $spacing-small;
+  grid-template-columns: 1;
+
+  & .tab-div {
+    @include flexy(column);
+
+    & h2 {
+      text-align: center;
+      margin-bottom: $spacing-small;
+    }
+  }
+}

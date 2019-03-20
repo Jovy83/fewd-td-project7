@@ -4,9 +4,17 @@
   flex-direction: row;
 }
 
-#header {
+#header, #main .tab-div {
   display: flex;
   flex-direction: column;
+}
+
+#main {
+  display: grid;
+}
+
+input {
+  padding: 0.5rem;
 }
 
 img, svg {
@@ -441,6 +449,21 @@ h2,
 h3,
 p {
   margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: #838383;
+}
+
+#main {
+  padding: 1rem;
+  grid-template-columns: 1;
+}
+#main .tab-div h2 {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 #header {

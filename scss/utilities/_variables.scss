@@ -4,6 +4,7 @@ $black: #000;
 $gray: #808080;
 $wild-blue: #7479BA;
 $east-bay: #4C4D6F;
+$gray: #838383;
 $dark-gray: #B2B2B2;
 $dark-sea-green: #91C694;
 $active-green: #8DD490;
@@ -11,6 +12,9 @@ $active-green: #8DD490;
 $color-primary: $wild-blue;
 $color-secondary: $east-bay;
 $color-tertiary: $dark-sea-green;
+
+// Font color
+// TODO: add font colors for the headers, normal text,
 
 $btn-colors: (
   default: $wild-blue,
