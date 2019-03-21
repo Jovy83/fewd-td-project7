@@ -459,7 +459,7 @@ h3 {
 
 #main {
   padding: 1rem;
-  grid-template-columns: 1;
+  grid-template-columns: 1fr;
 }
 #main .tab-div h2 {
   text-align: center;

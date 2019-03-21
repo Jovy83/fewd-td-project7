@@ -1,7 +1,7 @@
 #main {
   @extend %grid;
   padding: $spacing-small;
-  grid-template-columns: 1;
+  grid-template-columns: 1fr;
 
   & .tab-div {
     @include flexy(column);
