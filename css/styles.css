@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
-#navigation ul, #header .profile-div, #header .notification-and-profile-div {
+.nav, .div--profile, .div--notification-and-profile {
   display: flex;
   flex-direction: row;
 }
 
-#header, #main .tab-div {
+.header, #main .tab-div {
   display: flex;
   flex-direction: column;
 }
@@ -17,9 +17,13 @@ input {
   padding: 0.5rem;
 }
 
-img, svg {
+.svg--icon, .img--avatar {
   height: 2.5rem;
   width: 2.5rem;
+}
+
+.img--avatar {
+  border-radius: 50%;
 }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -447,16 +451,37 @@ body {
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: #838383;
 }
 
+/* Buttons:
+    .btn--default
+    .btn--success
+    .btn--error
+    .btn--warning
+    .btn--info
+    .theme__colors */
+.div--notification-and-profile {
+  justify-content: space-between;
+  width: 95%;
+}
+.div--profile {
+  align-items: center;
+}
+
+/*   Forms:
+    .form
+    .form__label--hidden
+    .form__input */
 #main {
   padding: 1rem;
   grid-template-columns: 1fr;
@@ -466,50 +491,50 @@ h3 {
   margin-bottom: 1rem;
 }
 
-#header {
+.header {
   align-items: center;
   background: #7479BA;
   padding: 1rem;
 }
-#header h1 {
+
+.headline--primary {
   color: #fff;
   margin-bottom: 1rem;
 }
-#header h1 .thin {
+nav {
+  background: #4C4D6F;
+}
+
+.nav {
+  justify-content: space-around;
+}
+.nav__item {
+  padding: 0.5rem;
+  border: 0.35rem solid transparent;
+}
+.nav__item.active {
+  border-bottom: 0.35rem solid #8DD490;
+}
+
+.thin {
   font-weight: 300;
 }
-#header h1 .tm {
+
+.tm {
   font-size: 0.9rem;
   vertical-align: top;
 }
-#header .notification-and-profile-div {
-  justify-content: space-between;
-  width: 95%;
-}
-#header .profile-div {
-  align-items: center;
-}
-#header .profile-div .username {
+
+.username {
   color: #fff;
   margin-left: 0.5rem;
 }
 
-.avatar {
-  border-radius: 50%;
-}
-
-#navigation {
-  background: #4C4D6F;
-}
-#navigation ul {
-  justify-content: space-around;
-}
-#navigation ul li {
-  padding: 0.5rem;
-  border: 0.35rem solid transparent;
-}
-#navigation ul li.active {
-  border-bottom: 0.35rem solid #8DD490;
-}
+/* Typography:
+    .container
+    .link
+    .blockquote
+    .headline--primary
+    .headline--secondary */
 
 /*# sourceMappingURL=styles.css.map */

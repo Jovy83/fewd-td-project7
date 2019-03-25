@@ -1,0 +1,13 @@
+.div {
+
+  &--notification-and-profile {
+    @include flexy(row);
+    justify-content: space-between;
+    width: 95%;
+  }
+
+  &--profile {
+    @include flexy(row);
+    align-items: center;
+  }
+}

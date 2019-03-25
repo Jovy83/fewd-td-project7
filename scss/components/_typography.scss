@@ -2,3 +2,24 @@
 @if variable-exists(font-url--google) {
   @import url($font-url--google);
 }
+
+.thin {
+  font-weight: $weight-thin;
+}
+
+.tm {
+  font-size: $size-tm-text;
+  vertical-align: top;
+}
+
+.username {
+  color: $white;
+  margin-left: $spacing-extrasmall;
+}
+
+/* Typography:
+    .container
+    .link
+    .blockquote
+    .headline--primary
+    .headline--secondary */

@@ -1,11 +1,13 @@
-svg {
-  @extend %icon;
+.img {
+  &--avatar {
+    @extend %rounded;
+    @extend %icon;
+    
+  }
 }
 
-img {
-  @extend %icon;
-}
-
-.avatar {
-  border-radius: 50%;
+.svg {
+  &--icon {
+    @extend %icon;
+  }
 }

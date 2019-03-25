@@ -1,17 +1,17 @@
-#navigation {
+nav {
   background: $color-secondary;
+}
 
-  & ul {
-    @include flexy(row);
-    justify-content: space-around;
+.nav {
+  @include flexy(row);
+  justify-content: space-around;
 
-    & li {
-      padding: $spacing-extrasmall;
-      border: $border-active-size solid transparent;
+  &__item {
+    padding: $spacing-extrasmall;
+    border: $border-active-size solid transparent;
 
-      &.active {
-        border-bottom: $border-active-size solid $active-green;
-      }
+    &.active {
+      border-bottom: $border-active-size solid $active-green;
     }
   }
 }

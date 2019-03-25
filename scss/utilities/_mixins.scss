@@ -1,3 +1,8 @@
+@mixin dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}
+
 @mixin flexy($direction) {
  @if $direction == row {
    @extend %flex-row;
