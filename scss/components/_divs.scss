@@ -19,9 +19,20 @@
   &--chart-primary {
     @extend %div-spacing;
     @include flexy(column);
-
+    border-bottom: $border-div-size solid $dark-gray;
     &-label {
       @extend %div-spacing;
     }
   }
+
+  &--chart-secondary {
+    @extend %div-spacing;
+  }
+
+  &--chart-tertiary {
+    @extend %div-spacing;
+    border-bottom: $border-div-size solid $dark-gray;
+  }
+
+
 }
