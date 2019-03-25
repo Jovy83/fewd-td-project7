@@ -15,4 +15,13 @@
     @extend %div-spacing;
     @include flexy(column);
   }
+
+  &--chart-primary {
+    @extend %div-spacing;
+    @include flexy(column);
+
+    &-label {
+      @extend %div-spacing;
+    }
+  }
 }

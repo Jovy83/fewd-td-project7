@@ -1,4 +1,4 @@
-nav {
+.nav-area {
   background: $color-secondary;
 }
 
@@ -12,6 +12,24 @@ nav {
 
     &.active {
       border-bottom: $border-active-size solid $active-green;
+    }
+  }
+}
+
+.ul--chart {
+  @include flexy(row);
+  justify-content: space-around;
+
+  &-item {
+    a {
+      padding: $spacing-extrasmall;
+      border-radius: $nav-border-radius;
+      color: $gray;
+
+      &.active {
+        background: $active-green;
+        color: $white;
+      }
     }
   }
 }

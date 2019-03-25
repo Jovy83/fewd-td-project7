@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
-.nav, .div--profile, .div--notification-and-profile {
+.ul--chart, .nav, .div--profile, .div--notification-and-profile {
   display: flex;
   flex-direction: row;
 }
 
-.header, .div--tab {
+.header, .div--chart-primary, .div--tab {
   display: flex;
   flex-direction: column;
 }
@@ -13,7 +13,7 @@
   display: grid;
 }
 
-.div--tab {
+.div--chart-primary-label, .div--chart-primary, .div--tab {
   margin-bottom: 2rem;
 }
 
@@ -504,7 +504,7 @@ input {
   text-align: center;
   margin-bottom: 1rem;
 }
-nav {
+.nav-area {
   background: #4C4D6F;
 }
 
@@ -517,6 +517,19 @@ nav {
 }
 .nav__item.active {
   border-bottom: 0.35rem solid #8DD490;
+}
+
+.ul--chart {
+  justify-content: space-around;
+}
+.ul--chart-item a {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  color: #838383;
+}
+.ul--chart-item a.active {
+  background: #8DD490;
+  color: #fff;
 }
 
 .thin {
