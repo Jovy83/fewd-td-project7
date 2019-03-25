@@ -16,16 +16,14 @@
   display: grid;
 }
 
-%padded {
-  padding: $spacing-extrasmall;
+%div-spacing {
+  margin-bottom: $spacing-medium;
 }
 
 %icon {
   height: 2.5rem;
   width: 2.5rem;
 }
-
-
 
 %rounded {
   border-radius: 50%;

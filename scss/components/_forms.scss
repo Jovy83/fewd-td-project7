@@ -1,5 +1,5 @@
 input {
-  @extend %padded;
+  padding: $spacing-extrasmall;
 }
 /*   Forms:
     .form

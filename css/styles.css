@@ -4,17 +4,17 @@
   flex-direction: row;
 }
 
-.header, #main .tab-div {
+.header, .div--tab {
   display: flex;
   flex-direction: column;
 }
 
-#main {
+.main {
   display: grid;
 }
 
-input {
-  padding: 0.5rem;
+.div--tab {
+  margin-bottom: 2rem;
 }
 
 .svg--icon, .img--avatar {
@@ -477,18 +477,17 @@ h4 {
 .div--profile {
   align-items: center;
 }
+input {
+  padding: 0.5rem;
+}
 
 /*   Forms:
     .form
     .form__label--hidden
     .form__input */
-#main {
+.main {
   padding: 1rem;
   grid-template-columns: 1fr;
-}
-#main .tab-div h2 {
-  text-align: center;
-  margin-bottom: 1rem;
 }
 
 .header {
@@ -499,6 +498,10 @@ h4 {
 
 .headline--primary {
   color: #fff;
+  margin-bottom: 1rem;
+}
+.headline--secondary {
+  text-align: center;
   margin-bottom: 1rem;
 }
 nav {

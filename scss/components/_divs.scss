@@ -10,4 +10,9 @@
     @include flexy(row);
     align-items: center;
   }
+
+  &--tab {
+    @extend %div-spacing;
+    @include flexy(column);
+  }
 }

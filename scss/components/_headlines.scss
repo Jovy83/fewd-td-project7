@@ -6,7 +6,8 @@
   }
 
   &--secondary {
-
+    text-align: center;
+    margin-bottom: $spacing-small;
   }
 
   &--tertiary {
@@ -14,8 +15,6 @@
   }
 
   &--quaternary {
-
+    
   }
 }
-
-// TODO: header is done, next is the navigation
