@@ -34,5 +34,22 @@
     border-bottom: $border-div-size solid $dark-gray;
   }
 
+  &--social-cards {
+    @include flexy(column);
+  }
 
+  &--social-card {
+    @extend %div-spacing;
+    @extend %grid;
+    background: $off-white;
+    border: $border-badge-size solid $dark-gray;
+    padding: $spacing-extrasmall;
+    grid-gap: $spacing-extrasmall;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+    "badge label"
+    "badge stats";
+  }
 }
+
+// TODO: dont need the other flexboxes. check which ones are ok to delete

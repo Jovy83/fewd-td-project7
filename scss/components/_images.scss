@@ -2,7 +2,6 @@
   &--avatar {
     @extend %rounded;
     @extend %icon;
-
   }
 }
 
@@ -10,4 +9,14 @@
   &--icon {
     @extend %icon;
   }
+  &--badge {
+    @extend %social-icon;
+    background: $color-primary;
+    border-radius: $border-rounded-radius;
+    grid-area: badge;
+    & path {
+      fill: $white;
+    }
+  }
 }
+// TODO: figure out the social badges next. how to make perfect square

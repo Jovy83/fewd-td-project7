@@ -11,10 +11,14 @@
   }
 
   &--tertiary {
-
+    color: $color-primary;
+    grid-area: label;
   }
 
   &--quaternary {
-    
+    color: $black;
+    font-weight: normal;
+    font-size: $size-social-stats-text;
+    grid-area: stats;
   }
 }

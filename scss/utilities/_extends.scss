@@ -21,8 +21,14 @@
 }
 
 %icon {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: $size-icon;
+  width: $size-icon;
+}
+
+%social-icon {
+  height: $size-social-icon;
+  width: $size-social-icon;
+  padding: $spacing-small;
 }
 
 %rounded {

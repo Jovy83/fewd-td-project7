@@ -1,3 +1,8 @@
+.container {
+  width: $size-container;
+  margin: 0 auto;
+}
+
 .main {
   @extend %grid;
   padding: $spacing-small;

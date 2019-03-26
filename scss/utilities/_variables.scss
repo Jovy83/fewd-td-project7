@@ -8,6 +8,7 @@ $gray: #838383;
 $dark-gray: #B2B2B2;
 $dark-sea-green: #91C694;
 $active-green: #8DD490;
+$off-white: #F5F5F5;
 
 $color-primary: $wild-blue;
 $color-secondary: $east-bay;
@@ -26,8 +27,7 @@ $font-family--primary    : 'Raleway', sans-serif;
 
 // Font size
 $size-primary-text: 1rem; // will be used by mostly everything
-$size-secondary-text: 1.3rem;
-$size-tertiary-text: 1.8rem;
+$size-social-stats-text: 3rem;
 $size-tm-text: 0.9rem;
 
 // Font weight
@@ -41,12 +41,19 @@ $spacing-medium: 2rem;
 $spacing-large: 3rem;
 $padding-button: 0.75rem;
 
+// Container size
+$size-container: 100%;
+
 // Border
 $border-active-size: 0.35rem;
 $border-div-size: 0.15rem;
+$border-badge-size: 0.12rem;
 $border-rounded-radius: 50%;
-$nav-border-radius: 1rem;
+$border-nav-radius: 1rem;
 
+// Icon sizes
+$size-icon: 2.5rem;
+$size-social-icon: 5rem;
 
 // Maps //
 $screen-sizes: (

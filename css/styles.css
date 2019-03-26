@@ -4,22 +4,28 @@
   flex-direction: row;
 }
 
-.header, .div--chart-primary, .div--tab {
+.header, .div--social-cards, .div--chart-primary, .div--tab {
   display: flex;
   flex-direction: column;
 }
 
-.main {
+.main, .div--social-card {
   display: grid;
 }
 
-.div--chart-tertiary, .div--chart-secondary, .div--chart-primary-label, .div--chart-primary, .div--tab {
+.div--social-card, .div--chart-tertiary, .div--chart-secondary, .div--chart-primary-label, .div--chart-primary, .div--tab {
   margin-bottom: 2rem;
 }
 
 .svg--icon, .img--avatar {
   height: 2.5rem;
   width: 2.5rem;
+}
+
+.svg--badge {
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
 }
 
 .img--avatar {
@@ -487,6 +493,14 @@ canvas {
 .div--chart-tertiary {
   border-bottom: 0.15rem solid #B2B2B2;
 }
+.div--social-card {
+  background: #F5F5F5;
+  border: 0.12rem solid #B2B2B2;
+  padding: 0.5rem;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "badge label" "badge stats";
+}
 
 input {
   padding: 0.5rem;
@@ -496,6 +510,11 @@ input {
     .form
     .form__label--hidden
     .form__input */
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .main {
   padding: 1rem;
   grid-template-columns: 1fr;
@@ -515,6 +534,26 @@ input {
   text-align: center;
   margin-bottom: 1rem;
 }
+.headline--tertiary {
+  color: #7479BA;
+  grid-area: label;
+}
+.headline--quaternary {
+  color: #000;
+  font-weight: normal;
+  font-size: 3rem;
+  grid-area: stats;
+}
+
+.svg--badge {
+  background: #7479BA;
+  border-radius: 50%;
+  grid-area: badge;
+}
+.svg--badge path {
+  fill: #fff;
+}
+
 .nav-area {
   background: #4C4D6F;
 }
