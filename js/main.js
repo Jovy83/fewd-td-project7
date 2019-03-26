@@ -29,7 +29,7 @@ const chartMonthlyTraffic = new Chart(chartMonthlyTrafficElement, {
     },
     legend: {
       display: false
-    }
+    },
   }
 });
 
@@ -56,7 +56,7 @@ const chartDailyTraffic = new Chart(chartDailyTrafficElement, {
     },
     legend: {
       display: false
-    }
+    },
 
   }
 });
@@ -74,6 +74,5 @@ const chartPlatformTraffic = new Chart(chartPlatformTrafficElement, {
     }]
   },
   options: {
-
   }
 });

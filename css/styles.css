@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
-.ul--chart, .nav, .div--profile, .div--notification-and-profile {
+.ul--chart, .nav, .div--new-member, .div--profile, .div--notification-and-profile {
   display: flex;
   flex-direction: row;
 }
@@ -13,7 +13,7 @@
   display: grid;
 }
 
-.div--social-card, .div--chart-tertiary, .div--chart-secondary, .div--chart-primary-label, .div--chart-primary, .div--tab {
+.div--new-members, .div--social-card, .div--social-cards, .div--chart-tertiary, .div--chart-secondary, .div--chart-primary-label, .div--chart-primary, .div--tab {
   margin-bottom: 2rem;
 }
 
@@ -496,12 +496,11 @@ canvas {
 .div--social-card {
   background: #F5F5F5;
   border: 0.12rem solid #B2B2B2;
-  padding: 0.5rem;
-  grid-gap: 0.5rem;
-  grid-template-columns: 1fr 2fr;
+  padding: 1rem;
+  grid-gap: 0.2rem;
+  grid-template-columns: minmax(100px, 1fr) minmax(200px, 2fr);
   grid-template-areas: "badge label" "badge stats";
 }
-
 input {
   padding: 0.5rem;
 }
@@ -517,7 +516,7 @@ input {
 
 .main {
   padding: 1rem;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(100px, 1fr);
 }
 
 .header {
@@ -540,8 +539,8 @@ input {
 }
 .headline--quaternary {
   color: #000;
-  font-weight: normal;
-  font-size: 3rem;
+  font-weight: 300;
+  font-size: 2.5rem;
   grid-area: stats;
 }
 

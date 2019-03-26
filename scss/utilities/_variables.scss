@@ -27,7 +27,7 @@ $font-family--primary    : 'Raleway', sans-serif;
 
 // Font size
 $size-primary-text: 1rem; // will be used by mostly everything
-$size-social-stats-text: 3rem;
+$size-social-stats-text: 2.5rem;
 $size-tm-text: 0.9rem;
 
 // Font weight
@@ -40,6 +40,9 @@ $spacing-small: 1rem;
 $spacing-medium: 2rem;
 $spacing-large: 3rem;
 $padding-button: 0.75rem;
+
+// Grid
+$size-grid-gap: 0.2rem;
 
 // Container size
 $size-container: 100%;

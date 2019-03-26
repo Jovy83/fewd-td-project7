@@ -35,6 +35,7 @@
   }
 
   &--social-cards {
+    @extend %div-spacing;
     @include flexy(column);
   }
 
@@ -43,12 +44,20 @@
     @extend %grid;
     background: $off-white;
     border: $border-badge-size solid $dark-gray;
-    padding: $spacing-extrasmall;
-    grid-gap: $spacing-extrasmall;
-    grid-template-columns: 1fr 2fr;
+    padding: $spacing-small;
+    grid-gap: $size-grid-gap;
+    grid-template-columns: minmax(100px,1fr) minmax(200px, 2fr);
     grid-template-areas:
     "badge label"
     "badge stats";
+  }
+
+  &--new-members {
+    @extend %div-spacing;
+  }
+
+  &--new-member {
+    @include flexy(row);
   }
 }
 

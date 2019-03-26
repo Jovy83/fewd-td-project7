@@ -17,7 +17,7 @@
 
   &--quaternary {
     color: $black;
-    font-weight: normal;
+    font-weight: $weight-thin;
     font-size: $size-social-stats-text;
     grid-area: stats;
   }
