@@ -18,7 +18,6 @@
 
   &--chart-primary {
     @extend %div-spacing;
-    @include flexy(column);
     border-bottom: $border-div-size solid $dark-gray;
     &-label {
       @extend %div-spacing;
@@ -46,7 +45,7 @@
     border: $border-badge-size solid $dark-gray;
     padding: $spacing-small;
     grid-gap: $size-grid-gap;
-    grid-template-columns: minmax(100px,1fr) minmax(200px, 2fr);
+    grid-template-columns: minmax(100px, 1fr) minmax(150px, 2fr);
     grid-template-areas:
     "badge label"
     "badge stats";
@@ -58,6 +57,16 @@
 
   &--new-member {
     @include flexy(row);
+    border-bottom: $border-separator-size solid $dark-gray;
+    padding: $spacing-small 0;
+
+    &:last-child {
+      border: none;
+    }
+
+    &-details {
+      margin: 0 $spacing-extrasmall;
+    }
   }
 }
 

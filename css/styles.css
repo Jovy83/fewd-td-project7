@@ -4,7 +4,7 @@
   flex-direction: row;
 }
 
-.header, .div--social-cards, .div--chart-primary, .div--tab {
+.header, .div--social-cards, .div--tab {
   display: flex;
   flex-direction: column;
 }
@@ -498,9 +498,20 @@ canvas {
   border: 0.12rem solid #B2B2B2;
   padding: 1rem;
   grid-gap: 0.2rem;
-  grid-template-columns: minmax(100px, 1fr) minmax(200px, 2fr);
+  grid-template-columns: minmax(100px, 1fr) minmax(150px, 2fr);
   grid-template-areas: "badge label" "badge stats";
 }
+.div--new-member {
+  border-bottom: 0.1rem solid #B2B2B2;
+  padding: 1rem 0;
+}
+.div--new-member:last-child {
+  border: none;
+}
+.div--new-member-details {
+  margin: 0 0.5rem;
+}
+
 input {
   padding: 0.5rem;
 }
@@ -523,25 +534,6 @@ input {
   align-items: center;
   background: #7479BA;
   padding: 1rem;
-}
-
-.headline--primary {
-  color: #fff;
-  margin-bottom: 1rem;
-}
-.headline--secondary {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.headline--tertiary {
-  color: #7479BA;
-  grid-area: label;
-}
-.headline--quaternary {
-  color: #000;
-  font-weight: 300;
-  font-size: 2.5rem;
-  grid-area: stats;
 }
 
 .svg--badge {
@@ -593,6 +585,36 @@ input {
 .username {
   color: #fff;
   margin-left: 0.5rem;
+}
+
+.date {
+  margin-left: auto;
+}
+
+.text--primary {
+  font-size: 1rem;
+}
+.text--secondary {
+  font-size: 0.85rem;
+}
+
+.headline--primary {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.headline--secondary {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.headline--tertiary {
+  color: #7479BA;
+  grid-area: label;
+}
+.headline--quaternary {
+  color: #000;
+  font-weight: 300;
+  font-size: 2.5rem;
+  grid-area: stats;
 }
 
 /* Typography:
