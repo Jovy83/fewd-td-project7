@@ -56,18 +56,25 @@
   }
 
   &--new-member {
+    @extend %member-div;
     @include flexy(row);
-    border-bottom: $border-separator-size solid $dark-gray;
-    padding: $spacing-small 0;
-
-    &:last-child {
-      border: none;
-    }
 
     &-details {
-      margin: 0 $spacing-extrasmall;
+      @extend %left-right-spacing;
+    }
+  }
+
+  &--recent-activities {
+    @extend %div-spacing;
+  }
+
+  &--recent-activity {
+    @extend %member-div;
+    @include flexy(row);
+
+    &-details {
+      @extend %left-right-spacing;
     }
   }
 }
-
-// TODO: dont need the other flexboxes. check which ones are ok to delete
+// TODO: refactor the 2 divs above when we get back. also commit na yan, then proceed to message user form

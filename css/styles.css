@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
-.ul--chart, .nav, .div--new-member, .div--profile, .div--notification-and-profile {
+.ul--chart, .nav, .div--recent-activity, .div--new-member, .div--profile, .div--notification-and-profile {
   display: flex;
   flex-direction: row;
 }
@@ -13,8 +13,21 @@
   display: grid;
 }
 
-.div--new-members, .div--social-card, .div--social-cards, .div--chart-tertiary, .div--chart-secondary, .div--chart-primary-label, .div--chart-primary, .div--tab {
+.div--recent-activities, .div--new-members, .div--social-card, .div--social-cards, .div--chart-tertiary, .div--chart-secondary, .div--chart-primary-label, .div--chart-primary, .div--tab {
   margin-bottom: 2rem;
+}
+
+.div--recent-activity, .div--new-member {
+  align-items: center;
+  border-bottom: 0.1rem solid #B2B2B2;
+  padding: 1rem 0;
+}
+.div--recent-activity:last-child, .div--new-member:last-child {
+  border: none;
+}
+
+.div--recent-activity-details, .div--new-member-details {
+  margin: 0 0.5rem;
 }
 
 .svg--icon, .img--avatar {
@@ -501,17 +514,6 @@ canvas {
   grid-template-columns: minmax(100px, 1fr) minmax(150px, 2fr);
   grid-template-areas: "badge label" "badge stats";
 }
-.div--new-member {
-  border-bottom: 0.1rem solid #B2B2B2;
-  padding: 1rem 0;
-}
-.div--new-member:last-child {
-  border: none;
-}
-.div--new-member-details {
-  margin: 0 0.5rem;
-}
-
 input {
   padding: 0.5rem;
 }
@@ -587,8 +589,17 @@ input {
   margin-left: 0.5rem;
 }
 
-.date {
+.user-date {
   margin-left: auto;
+}
+
+.user-hours {
+  font-weight: 300;
+}
+
+.more {
+  margin-left: auto;
+  font-size: 2rem;
 }
 
 .text--primary {

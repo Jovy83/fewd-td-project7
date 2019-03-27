@@ -20,6 +20,20 @@
   margin-bottom: $spacing-medium;
 }
 
+%member-div {
+  align-items: center;
+  border-bottom: $border-separator-size solid $dark-gray;
+  padding: $spacing-small 0;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+%left-right-spacing {
+  margin: 0 $spacing-extrasmall;
+}
+
 %icon {
   height: $size-icon;
   width: $size-icon;

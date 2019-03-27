@@ -17,8 +17,17 @@
   margin-left: $spacing-extrasmall;
 }
 
-.date {
+.user-date {
   margin-left: auto;
+}
+
+.user-hours {
+  font-weight: $weight-thin;
+}
+
+.more {
+  margin-left: auto;
+  font-size: $size-more-text;
 }
 
 .text {
