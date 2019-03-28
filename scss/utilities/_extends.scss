@@ -34,6 +34,33 @@
   margin: 0 $spacing-extrasmall;
 }
 
+%form-element {
+  background: $off-white;
+  border: $border-form-size solid transparent;
+  border-radius: $border-form-radius;
+  padding: $spacing-extrasmall;
+  transition: background $duration-animation, border $duration-animation;
+  transition-timing-function: ease-in-out;
+
+  &:focus {
+    outline: none;
+    border: $border-form-size solid $active-green;
+    background: #FFFFCC;
+  }
+}
+
+%button {
+  color: $white;
+  padding: $spacing-extrasmall;
+  border-radius: $border-form-radius;
+  transition: opacity $duration-animation;
+  transition-timing-function: ease-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 %icon {
   height: $size-icon;
   width: $size-icon;

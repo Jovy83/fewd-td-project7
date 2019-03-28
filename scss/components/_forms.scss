@@ -1,7 +1,13 @@
-input {
-  padding: $spacing-extrasmall;
+.form {
+  @include flexy(column);
+
+  &__input {
+    @extend %form-element;
+  }
+  
+  &__textarea {
+    @extend %form-element;
+    margin: $spacing-small 0;
+    resize: none;
+  }
 }
-/*   Forms:
-    .form
-    .form__label--hidden
-    .form__input */

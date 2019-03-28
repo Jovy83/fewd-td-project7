@@ -4,7 +4,7 @@
   flex-direction: row;
 }
 
-.header, .div--social-cards, .div--tab {
+.header, .form, .div--social-cards, .div--tab {
   display: flex;
   flex-direction: column;
 }
@@ -13,7 +13,7 @@
   display: grid;
 }
 
-.div--recent-activities, .div--new-members, .div--social-card, .div--social-cards, .div--chart-tertiary, .div--chart-secondary, .div--chart-primary-label, .div--chart-primary, .div--tab {
+.div--message-user, .div--recent-activities, .div--new-members, .div--social-card, .div--social-cards, .div--chart-tertiary, .div--chart-secondary, .div--chart-primary-label, .div--chart-primary, .div--tab {
   margin-bottom: 2rem;
 }
 
@@ -28,6 +28,31 @@
 
 .div--recent-activity-details, .div--new-member-details {
   margin: 0 0.5rem;
+}
+
+.form__textarea, .form__input {
+  background: #F5F5F5;
+  border: 0.1rem solid transparent;
+  border-radius: 0.3125rem;
+  padding: 0.5rem;
+  transition: background 0.5s, border 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.form__textarea:focus, .form__input:focus {
+  outline: none;
+  border: 0.1rem solid #8DD490;
+  background: #FFFFCC;
+}
+
+.btn--default {
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.3125rem;
+  transition: opacity 0.5s;
+  transition-timing-function: ease-out;
+}
+.btn--default:hover {
+  opacity: 0.8;
 }
 
 .svg--icon, .img--avatar {
@@ -482,13 +507,9 @@ h4 {
   color: #838383;
 }
 
-/* Buttons:
-    .btn--default
-    .btn--success
-    .btn--error
-    .btn--warning
-    .btn--info
-    .theme__colors */
+.btn--default {
+  background: #7479BA;
+}
 canvas {
   margin-bottom: 2rem;
 }
@@ -514,14 +535,11 @@ canvas {
   grid-template-columns: minmax(100px, 1fr) minmax(150px, 2fr);
   grid-template-areas: "badge label" "badge stats";
 }
-input {
-  padding: 0.5rem;
+.form__textarea {
+  margin: 1rem 0;
+  resize: none;
 }
 
-/*   Forms:
-    .form
-    .form__label--hidden
-    .form__input */
 .container {
   width: 100%;
   margin: 0 auto;

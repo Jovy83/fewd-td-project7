@@ -130,7 +130,7 @@
 
         <div class="div--tab">
           <h2 class="headline--secondary">Dashboard</h2>
-          <input class="text--primary" type="search" id="search" name="search_query" value="" placeholder="Search">
+          <input class="text--primary form__input" type="search" id="search" name="search_query" value="" placeholder="Search">
         </div>
 
         <div class="div--chart-primary">
@@ -298,7 +298,12 @@
 
         <div class="div--message-user">
           <h2 class="headline--secondary">Message User</h2>
+          <form class="form" action="index.html" method="post">
+            <input class="text--primary form__input" type="text" id="username" name="user_name" value="" placeholder="Search for user" required>
 
+            <textarea class="text--primary form__textarea" id="message" name="message" rows="7" placeholder="Message for User"></textarea>
+            <button class="btn--default" type="submit" name="button">Send</button>
+          </form>
         </div>
 
         <div class="div--settings">
