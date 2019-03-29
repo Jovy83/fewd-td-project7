@@ -13,7 +13,7 @@
   display: grid;
 }
 
-.div--message-user, .div--recent-activities, .div--new-members, .div--social-card, .div--social-cards, .div--chart-tertiary, .div--chart-secondary, .div--chart-primary-label, .div--chart-primary, .div--tab {
+.div--settings, .div--message-user, .div--recent-activities, .div--new-members, .div--social-card, .div--social-cards, .div--chart-tertiary, .div--chart-secondary, .div--chart-primary-label, .div--chart-primary, .div--tab {
   margin-bottom: 2rem;
 }
 
@@ -44,14 +44,14 @@
   background: #FFFFCC;
 }
 
-.btn--default {
+.btn--error, .btn--default {
   color: #fff;
   padding: 0.5rem;
   border-radius: 0.3125rem;
   transition: opacity 0.5s;
   transition-timing-function: ease-out;
 }
-.btn--default:hover {
+.btn--error:hover, .btn--default:hover {
   opacity: 0.8;
 }
 
@@ -510,6 +510,10 @@ h4 {
 .btn--default {
   background: #7479BA;
 }
+.btn--error {
+  background: #91C694;
+}
+
 canvas {
   margin-bottom: 2rem;
 }
@@ -538,6 +542,13 @@ canvas {
 .form__textarea {
   margin: 1rem 0;
   resize: none;
+}
+.form__select {
+  height: 2rem;
+}
+
+label {
+  width: 20%;
 }
 
 .container {

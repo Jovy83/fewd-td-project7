@@ -5,6 +5,7 @@
   }
 
   &--error {
-
+    @extend %button;
+    background: $color-tertiary;
   }
 }

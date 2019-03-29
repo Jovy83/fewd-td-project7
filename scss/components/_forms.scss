@@ -4,10 +4,21 @@
   &__input {
     @extend %form-element;
   }
-  
+
   &__textarea {
     @extend %form-element;
     margin: $spacing-small 0;
     resize: none;
   }
+
+  &__select {
+    height: 2rem;
+
+  }
+}
+
+label {
+  width: 20%;
+
+
 }

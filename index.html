@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebApp Dashboard</title>
+    <link rel="stylesheet" href="css/toggle-switch.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
@@ -302,12 +303,54 @@
             <input class="text--primary form__input" type="text" id="username" name="user_name" value="" placeholder="Search for user" required>
 
             <textarea class="text--primary form__textarea" id="message" name="message" rows="7" placeholder="Message for User"></textarea>
-            <button class="btn--default" type="submit" name="button">Send</button>
+            <button class="btn--default" type="submit" name="send">Send</button>
           </form>
         </div>
 
         <div class="div--settings">
           <h2 class="headline--secondary">Settings</h2>
+
+          <label class="switch-light switch-ios" onclick="">
+            <input type="checkbox">
+
+            <strong>
+              Send Email Notifications
+            </strong>
+
+            <span>
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+
+          <label class="switch-light switch-ios" onclick="">
+            <input type="checkbox">
+
+            <strong>
+              Set Profile to Public
+            </strong>
+
+            <span>
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+
+          <select class="form__select" id="timezone" name="user_timezone">
+            <option value="" disabled selected>Select Timezone</option>
+            <option value="GMT-7">Pacific</option>
+            <option value="GMT-6">Mountain</option>
+            <option value="GMT-5">Central</option>
+            <option value="GMT-4">Eastern</option>
+          </select>
+
+          <div class="">
+            <button class="btn--default" type="submit" name="save">Save</button>
+            <button class="btn--error" type="reset" name="cancel">Cancel</button>
+
+          </div>
 
         </div>
 
