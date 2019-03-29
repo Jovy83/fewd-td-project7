@@ -11,14 +11,12 @@
     resize: none;
   }
 
+  &__label {
+    width: 20%;
+  }
+
   &__select {
     height: 2rem;
-
+    margin-bottom: $spacing-medium;
   }
-}
-
-label {
-  width: 20%;
-
-
 }

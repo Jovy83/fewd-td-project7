@@ -310,33 +310,31 @@
         <div class="div--settings">
           <h2 class="headline--secondary">Settings</h2>
 
-          <label class="switch-light switch-ios" onclick="">
-            <input type="checkbox">
-
+          <div class="div--switch-container">
             <strong>
               Send Email Notifications
             </strong>
+            <label class="switch-light switch-ios form__label" onclick="">
+              <input type="checkbox">
+              <span>
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+            </label>
+          </div>
 
-            <span>
-              <span>Off</span>
-              <span>On</span>
-              <a></a>
-            </span>
-          </label>
-
-          <label class="switch-light switch-ios" onclick="">
-            <input type="checkbox">
-
-            <strong>
-              Set Profile to Public
-            </strong>
-
-            <span>
-              <span>Off</span>
-              <span>On</span>
-              <a></a>
-            </span>
-          </label>
+          <div class="div--switch-container">
+            <strong>Set Profile to Public</strong>
+              <label class="switch-light switch-ios form__label" onclick="">
+                <input type="checkbox">
+                <span>
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
+                </span>
+              </label>
+          </div>
 
           <select class="form__select" id="timezone" name="user_timezone">
             <option value="" disabled selected>Select Timezone</option>
@@ -346,10 +344,9 @@
             <option value="GMT-4">Eastern</option>
           </select>
 
-          <div class="">
+          <div class="div--button-container">
             <button class="btn--default" type="submit" name="save">Save</button>
             <button class="btn--error" type="reset" name="cancel">Cancel</button>
-
           </div>
 
         </div>

@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
-.ul--chart, .nav, .div--recent-activity, .div--new-member, .div--profile, .div--notification-and-profile {
+.ul--chart, .nav, .div--switch-container, .div--recent-activity, .div--new-member, .div--profile, .div--notification-and-profile {
   display: flex;
   flex-direction: row;
 }
 
-.header, .form, .div--social-cards, .div--tab {
+.header, .form, .div--settings, .div--social-cards, .div--tab {
   display: flex;
   flex-direction: column;
 }
 
-.main, .div--social-card {
+.main, .div--button-container, .div--social-card {
   display: grid;
 }
 
@@ -539,16 +539,25 @@ canvas {
   grid-template-columns: minmax(100px, 1fr) minmax(150px, 2fr);
   grid-template-areas: "badge label" "badge stats";
 }
+.div--switch-container {
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+.div--button-container {
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-column-gap: 1rem;
+}
+
 .form__textarea {
   margin: 1rem 0;
   resize: none;
 }
+.form__label {
+  width: 20%;
+}
 .form__select {
   height: 2rem;
-}
-
-label {
-  width: 20%;
+  margin-bottom: 2rem;
 }
 
 .container {

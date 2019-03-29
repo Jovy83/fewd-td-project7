@@ -83,5 +83,18 @@
 
   &--settings {
     @extend %div-spacing;
+    @include flexy(column);
+  }
+
+  &--switch-container {
+    @include flexy(row);
+    margin-bottom: $spacing-small;
+    justify-content: space-between;
+  }
+
+  &--button-container {
+    @extend %grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-column-gap: $spacing-small;
   }
 }
