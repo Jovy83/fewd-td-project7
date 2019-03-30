@@ -2,6 +2,10 @@
   &--default {
     @extend %button;
     background: $color-primary;
+
+    &[name="send"] {
+      margin-bottom: $spacing-medium;
+    }
   }
 
   &--error {

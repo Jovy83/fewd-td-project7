@@ -20,6 +20,10 @@
   margin-bottom: $spacing-medium;
 }
 
+%div-border-bottom {
+  border-bottom: $border-div-size solid $color-secondary;
+}
+
 %member-div {
   align-items: center;
   border-bottom: $border-separator-size solid $dark-gray;
@@ -27,6 +31,7 @@
 
   &:last-child {
     border: none;
+    margin-bottom: $spacing-small;
   }
 }
 
@@ -37,7 +42,7 @@
 %form-element {
   background: $off-white;
   border: $border-form-size solid transparent;
-  border-radius: $border-form-radius;
+  border-radius: $border-slightly-round-radius;
   padding: $spacing-extrasmall;
   transition: background $duration-animation, border $duration-animation;
   transition-timing-function: ease-in-out;
@@ -52,7 +57,7 @@
 %button {
   color: $white;
   padding: $spacing-extrasmall;
-  border-radius: $border-form-radius;
+  border-radius: $border-slightly-round-radius;
   transition: opacity $duration-animation;
   transition-timing-function: ease-out;
 

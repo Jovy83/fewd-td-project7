@@ -13,17 +13,22 @@
   display: grid;
 }
 
-.div--settings, .div--message-user, .div--recent-activities, .div--new-members, .div--social-card, .div--social-cards, .div--chart-tertiary, .div--chart-secondary, .div--chart-primary-label, .div--chart-primary, .div--tab {
+.div--settings, .div--message-user, .div--recent-activities, .div--new-members, .div--social-card, .div--social-stats, .div--chart-tertiary, .div--chart-secondary, .div--chart-primary-label, .div--chart-primary, .div--tab {
   margin-bottom: 2rem;
+}
+
+.div--message-user, .div--recent-activities, .div--new-members, .div--social-stats, .div--chart-tertiary, .div--chart-primary {
+  border-bottom: 0.1rem solid #4C4D6F;
 }
 
 .div--recent-activity, .div--new-member {
   align-items: center;
-  border-bottom: 0.1rem solid #B2B2B2;
+  border-bottom: 0.05rem solid #B2B2B2;
   padding: 1rem 0;
 }
 .div--recent-activity:last-child, .div--new-member:last-child {
   border: none;
+  margin-bottom: 1rem;
 }
 
 .div--recent-activity-details, .div--new-member-details {
@@ -56,8 +61,8 @@
 }
 
 .svg--icon, .img--avatar {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .svg--badge {
@@ -510,6 +515,9 @@ h4 {
 .btn--default {
   background: #7479BA;
 }
+.btn--default[name=send] {
+  margin-bottom: 2rem;
+}
 .btn--error {
   background: #91C694;
 }
@@ -525,15 +533,10 @@ canvas {
 .div--profile {
   align-items: center;
 }
-.div--chart-primary {
-  border-bottom: 0.15rem solid #B2B2B2;
-}
-.div--chart-tertiary {
-  border-bottom: 0.15rem solid #B2B2B2;
-}
 .div--social-card {
   background: #F5F5F5;
   border: 0.12rem solid #B2B2B2;
+  border-radius: 0.3125rem;
   padding: 1rem;
   grid-gap: 0.2rem;
   grid-template-columns: minmax(100px, 1fr) minmax(150px, 2fr);
@@ -650,6 +653,7 @@ canvas {
 .headline--primary {
   color: #fff;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 .headline--secondary {
   text-align: center;

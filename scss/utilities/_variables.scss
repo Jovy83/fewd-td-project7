@@ -21,6 +21,8 @@ $btn-colors: (
   cancel: $dark-gray,
 );
 
+// TODO: figure out how to use the above in our button sass file
+
 // Font Stacks
 $font-url--google        : 'https://fonts.googleapis.com/css?family=Raleway:300,400,700';
 $font-family--primary    : 'Raleway', sans-serif;
@@ -28,6 +30,7 @@ $font-family--primary    : 'Raleway', sans-serif;
 // Font size
 $size-primary-text: 1rem; // will be used by mostly everything
 $size-secondary-text: 0.85rem;
+$size-app-name-text: 1.5rem;
 $size-social-stats-text: 2.5rem;
 $size-tm-text: 0.9rem;
 $size-more-text: 2rem;
@@ -51,16 +54,16 @@ $size-container: 100%;
 
 // Border
 $border-active-size: 0.35rem;
-$border-div-size: 0.15rem;
+$border-div-size: 0.1rem;
 $border-badge-size: 0.12rem;
-$border-separator-size: 0.1rem;
+$border-separator-size: 0.05rem;
 $border-form-size: 0.1rem;
 $border-rounded-radius: 50%;
 $border-nav-radius: 1rem;
-$border-form-radius: 0.3125rem;
+$border-slightly-round-radius: 0.3125rem;
 
 // Icon sizes
-$size-icon: 2.5rem;
+$size-icon: 2rem;
 $size-social-icon: 5rem;
 
 // Animations
