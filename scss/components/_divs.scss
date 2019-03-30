@@ -2,18 +2,32 @@
 
   &--notification-and-profile {
     @include flexy(row);
+    @include media-query('tablet') {
+      justify-content: flex-end;
+    }
     justify-content: space-between;
     width: 95%;
   }
 
   &--profile {
     @include flexy(row);
+    @include media-query('tablet') {
+      border-left: $border-separator-size dashed $dark-gray;
+      padding-left: $spacing-medium;
+      margin-left: $spacing-medium;
+    }
     align-items: center;
   }
 
   &--tab {
     @extend %div-spacing;
     @include flexy(column);
+    @include media-query('tablet') {
+      background-color: $off-white;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &--chart-primary {

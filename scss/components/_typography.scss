@@ -43,6 +43,9 @@
 .headline {
 
   &--primary {
+    @include media-query('tablet') {
+      margin-bottom: 0;
+    }
     color: $white;
     margin-bottom: $spacing-small;
     font-size: $size-app-name-text;
@@ -51,6 +54,14 @@
   &--secondary {
     text-align: center;
     margin-bottom: $spacing-small;
+
+    &.tab {
+      @include media-query('tablet') {
+        background-color: $white;
+        margin-bottom: 0;
+        padding: $spacing-small;
+      }
+    }
   }
 
   &--tertiary {

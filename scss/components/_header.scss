@@ -1,5 +1,8 @@
 .header {
   @include flexy(column);
+  @include media-query('tablet') {
+    flex-direction: row;
+  }
   align-items: center;
   background: $color-primary;
   padding: $spacing-small;

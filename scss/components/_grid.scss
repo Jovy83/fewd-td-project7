@@ -5,6 +5,9 @@
 
 .main {
   @extend %grid;
+  @include media-query('tablet') {
+    padding: 0;
+  }
   padding: $spacing-small;
   grid-template-columns: minmax(100px, 1fr);
 }
