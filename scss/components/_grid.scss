@@ -6,7 +6,15 @@
 .main {
   @extend %grid;
   @include media-query('tablet') {
-    padding: 0;
+    padding: 0 0 $spacing-small;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-areas:
+    "tab tab"
+    "chart-primary chart-primary"
+    "chart-secondary chart-tertiary"
+    "social-stats social-stats"
+    "new-members recent-activity"
+    "message-user settings";
   }
   padding: $spacing-small;
   grid-template-columns: minmax(100px, 1fr);

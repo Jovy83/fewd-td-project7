@@ -52,17 +52,17 @@
   }
 
   &--secondary {
-    text-align: center;
-    margin-bottom: $spacing-small;
-
-    &.tab {
-      @include media-query('tablet') {
+    @include media-query('tablet') {
+      &.tab {
         background-color: $white;
         margin-bottom: 0;
         padding: $spacing-small;
       }
     }
+    text-align: center;
+    margin-bottom: $spacing-small;
   }
+
 
   &--tertiary {
     color: $color-primary;

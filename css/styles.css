@@ -17,8 +17,8 @@
   margin-bottom: 2rem;
 }
 
-.div--message-user, .div--recent-activities, .div--new-members, .div--social-stats, .div--chart-tertiary, .div--chart-primary {
-  border-bottom: 0.1rem solid #4C4D6F;
+.div--message-user, .div--recent-activities, .div--new-members, .div--social-stats, .div--chart-tertiary, .div--chart-secondary, .div--chart-primary {
+  border-bottom: 0.05rem solid #4C4D6F;
 }
 
 .div--recent-activity, .div--new-member {
@@ -551,6 +551,39 @@ canvas {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    grid-area: tab;
+  }
+}
+@media (min-width: 768px) {
+  .div--chart-primary {
+    grid-area: chart-primary;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .div--chart-secondary {
+    grid-area: chart-secondary;
+    border-right: 0.05rem solid #4C4D6F;
+    padding-top: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .div--chart-tertiary {
+    grid-area: chart-tertiary;
+    padding-top: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .div--social-stats {
+    grid-area: social-stats;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .div--social-cards {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 3rem;
   }
 }
 .div--social-card {
@@ -559,8 +592,45 @@ canvas {
   border-radius: 0.3125rem;
   padding: 1rem;
   grid-gap: 0.2rem;
-  grid-template-columns: minmax(100px, 1fr) minmax(150px, 2fr);
+  grid-template-columns: minmax(50px, 1fr) minmax(75px, 2fr);
   grid-template-areas: "badge label" "badge stats";
+}
+@media (min-width: 768px) {
+  .div--social-card {
+    margin-bottom: 0;
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+  }
+}
+@media (min-width: 768px) {
+  .div--new-members {
+    grid-area: new-members;
+    border-right: 0.05rem solid #4C4D6F;
+    padding: 1rem 1rem 0;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .div--recent-activities {
+    grid-area: recent-activity;
+    padding: 1rem 1rem 0;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .div--message-user {
+    grid-area: message-user;
+    border-right: 0.05rem solid #4C4D6F;
+    border-bottom: none;
+    padding: 1rem 1rem 0;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .div--settings {
+    grid-area: settings;
+    padding: 1rem 1rem 0;
+    justify-content: space-between;
+  }
 }
 .div--switch-container {
   margin-bottom: 1rem;
@@ -602,7 +672,9 @@ canvas {
 }
 @media (min-width: 768px) {
   .main {
-    padding: 0;
+    padding: 0 0 1rem;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-areas: "tab tab" "chart-primary chart-primary" "chart-secondary chart-tertiary" "social-stats social-stats" "new-members recent-activity" "message-user settings";
   }
 }
 

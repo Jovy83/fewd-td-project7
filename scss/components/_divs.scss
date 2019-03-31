@@ -27,6 +27,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      grid-area: tab;
     }
   }
 
@@ -36,35 +37,62 @@
     &-label {
       @extend %div-spacing;
     }
+    @include media-query('tablet') {
+      grid-area: chart-primary;
+      margin-bottom: 0;
+    }
   }
 
   &--chart-secondary {
     @extend %div-spacing;
+    @extend %div-border-bottom;
+    @include media-query('tablet') {
+      grid-area: chart-secondary;
+      border-right: $border-div-size solid $color-secondary;
+      padding-top: $spacing-small;
+    }
   }
 
   &--chart-tertiary {
     @extend %div-spacing;
     @extend %div-border-bottom;
+    @include media-query('tablet') {
+      grid-area: chart-tertiary;
+      padding-top: $spacing-small;
+    }
   }
 
   &--social-stats {
     @extend %div-spacing;
     @extend %div-border-bottom;
+    @include media-query('tablet') {
+      grid-area: social-stats;
+      margin-bottom: 0;
+    }
   }
 
   &--social-cards {
     @include flexy(column);
+    @include media-query('tablet') {
+      flex-direction: row;
+      justify-content: space-around;
+      margin-bottom: $spacing-large;
+    }
   }
 
   &--social-card {
     @extend %div-spacing;
     @extend %grid;
+    @include media-query('tablet') {
+      margin-bottom: 0;
+      grid-template-columns: repeat(2, minmax(50px, 1fr));
+    }
     background: $off-white;
     border: $border-badge-size solid $dark-gray;
     border-radius: $border-slightly-round-radius;
     padding: $spacing-small;
     grid-gap: $size-grid-gap;
-    grid-template-columns: minmax(100px, 1fr) minmax(150px, 2fr);
+    grid-template-columns: minmax(50px, 1fr) minmax(75px, 2fr);
     grid-template-areas:
     "badge label"
     "badge stats";
@@ -73,6 +101,12 @@
   &--new-members {
     @extend %div-spacing;
     @extend %div-border-bottom;
+    @include media-query('tablet') {
+      grid-area: new-members;
+      border-right: $border-div-size solid $color-secondary;
+      padding: $spacing-small $spacing-small 0;
+      margin-bottom: 0;
+    }
   }
 
   &--new-member {
@@ -87,6 +121,11 @@
   &--recent-activities {
     @extend %div-spacing;
     @extend %div-border-bottom;
+    @include media-query('tablet') {
+      grid-area: recent-activity;
+      padding: $spacing-small $spacing-small 0;
+      margin-bottom: 0;
+    }
   }
 
   &--recent-activity {
@@ -101,11 +140,23 @@
   &--message-user {
     @extend %div-spacing;
     @extend %div-border-bottom;
+    @include media-query('tablet') {
+      grid-area: message-user;
+      border-right: $border-div-size solid $color-secondary;
+      border-bottom: none;
+      padding: $spacing-small $spacing-small 0;
+      margin-bottom: 0;
+    }
   }
 
   &--settings {
     @extend %div-spacing;
     @include flexy(column);
+    @include media-query('tablet') {
+      grid-area: settings;
+      padding: $spacing-small $spacing-small 0;
+      justify-content: space-between;
+    }
   }
 
   &--switch-container {
