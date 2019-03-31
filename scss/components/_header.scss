@@ -3,6 +3,9 @@
   @include media-query('tablet') {
     flex-direction: row;
   }
+  @include media-query('desktop') {
+    grid-area: header;
+  }
   align-items: center;
   background: $color-primary;
   padding: $spacing-small;

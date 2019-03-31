@@ -557,6 +557,7 @@ canvas {
 @media (min-width: 768px) {
   .div--chart-primary {
     grid-area: chart-primary;
+    padding: 1rem 1rem 0;
     margin-bottom: 0;
   }
 }
@@ -564,13 +565,13 @@ canvas {
   .div--chart-secondary {
     grid-area: chart-secondary;
     border-right: 0.05rem solid #4C4D6F;
-    padding-top: 1rem;
+    padding: 1rem 1rem 0;
   }
 }
 @media (min-width: 768px) {
   .div--chart-tertiary {
     grid-area: chart-tertiary;
-    padding-top: 1rem;
+    padding: 1rem 1rem 0;
   }
 }
 @media (min-width: 768px) {
@@ -665,6 +666,13 @@ canvas {
   width: 100%;
   margin: 0 auto;
 }
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: minmax(20px, min-content) minmax(70px, 2fr);
+    grid-template-areas: "header header" "nav main";
+  }
+}
 
 .main {
   padding: 1rem;
@@ -677,6 +685,11 @@ canvas {
     grid-template-areas: "tab tab" "chart-primary chart-primary" "chart-secondary chart-tertiary" "social-stats social-stats" "new-members recent-activity" "message-user settings";
   }
 }
+@media (min-width: 1024px) {
+  .main {
+    grid-area: main;
+  }
+}
 
 .header {
   align-items: center;
@@ -686,6 +699,11 @@ canvas {
 @media (min-width: 768px) {
   .header {
     flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    grid-area: header;
   }
 }
 
@@ -701,9 +719,19 @@ canvas {
 .nav-area {
   background: #4C4D6F;
 }
+@media (min-width: 1024px) {
+  .nav-area {
+    grid-area: nav;
+  }
+}
 
 .nav {
   justify-content: space-around;
+}
+@media (min-width: 1024px) {
+  .nav {
+    flex-direction: column;
+  }
 }
 .nav__item {
   padding: 0.5rem;
@@ -711,6 +739,12 @@ canvas {
 }
 .nav__item.active {
   border-bottom: 0.35rem solid #8DD490;
+}
+@media (min-width: 1024px) {
+  .nav__item.active {
+    border-bottom-color: transparent;
+    border-left: 0.35rem solid #8DD490;
+  }
 }
 
 .ul--chart {

@@ -1,9 +1,16 @@
 .nav-area {
+  @include media-query('desktop') {
+    grid-area: nav;
+  }
   background: $color-secondary;
 }
 
 .nav {
   @include flexy(row);
+  @include media-query('desktop') {
+    flex-direction: column;
+  }
+
   justify-content: space-around;
 
   &__item {
@@ -11,6 +18,10 @@
     border: $border-active-size solid transparent;
 
     &.active {
+      @include media-query('desktop') {
+        border-bottom-color: transparent;
+        border-left: $border-active-size solid $active-green;
+      }
       border-bottom: $border-active-size solid $active-green;
     }
   }

@@ -1,4 +1,11 @@
 .container {
+  @include media-query('desktop') {
+    display: grid;
+    grid-template-columns: minmax(20px, min-content) minmax(70px, 2fr);
+    grid-template-areas:
+    "header header"
+    "nav main";
+  }
   width: $size-container;
   margin: 0 auto;
 }
@@ -15,6 +22,9 @@
     "social-stats social-stats"
     "new-members recent-activity"
     "message-user settings";
+  }
+  @include media-query('desktop') {
+    grid-area: main;
   }
   padding: $spacing-small;
   grid-template-columns: minmax(100px, 1fr);

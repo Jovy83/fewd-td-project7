@@ -39,6 +39,7 @@
     }
     @include media-query('tablet') {
       grid-area: chart-primary;
+      padding: $spacing-small $spacing-small 0;
       margin-bottom: 0;
     }
   }
@@ -49,7 +50,7 @@
     @include media-query('tablet') {
       grid-area: chart-secondary;
       border-right: $border-div-size solid $color-secondary;
-      padding-top: $spacing-small;
+      padding: $spacing-small $spacing-small 0;
     }
   }
 
@@ -58,7 +59,7 @@
     @extend %div-border-bottom;
     @include media-query('tablet') {
       grid-area: chart-tertiary;
-      padding-top: $spacing-small;
+      padding: $spacing-small $spacing-small 0;
     }
   }
 
