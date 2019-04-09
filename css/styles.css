@@ -556,6 +556,7 @@ canvas {
 }
 .div--alert {
   justify-content: space-between;
+  align-items: center;
   background-color: #7479BA;
   padding: 1rem;
   border-radius: 0.3125rem;
@@ -807,6 +808,7 @@ canvas {
 .close {
   color: #F5F5F5;
   font-weight: 700;
+  margin-left: 2rem;
 }
 
 .text--primary {
