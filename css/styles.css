@@ -561,6 +561,13 @@ canvas {
   border-radius: 0.3125rem;
 }
 @media (min-width: 768px) {
+  .div--alert {
+    grid-area: alert;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 768px) {
   .div--chart-primary {
     grid-area: chart-primary;
     padding: 1rem 1rem 0;
@@ -688,7 +695,7 @@ canvas {
   .main {
     padding: 0 0 1rem;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
-    grid-template-areas: "tab tab" "chart-primary chart-primary" "chart-secondary chart-tertiary" "social-stats social-stats" "new-members recent-activity" "message-user settings";
+    grid-template-areas: "tab tab" "alert alert" "chart-primary chart-primary" "chart-secondary chart-tertiary" "social-stats social-stats" "new-members recent-activity" "message-user settings";
   }
 }
 @media (min-width: 1024px) {

@@ -34,6 +34,11 @@
   &--alert {
     @extend %div-spacing;
     @include flexy(row);
+    @include media-query('tablet') {
+      grid-area: alert;
+      margin-left: $spacing-small;
+      margin-right: $spacing-small;
+    }
     justify-content: space-between;
     background-color: $color-primary;
     padding: $spacing-small;

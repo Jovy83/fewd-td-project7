@@ -17,6 +17,7 @@
     grid-template-columns: repeat(2, minmax(100px, 1fr));
     grid-template-areas:
     "tab tab"
+    "alert alert"
     "chart-primary chart-primary"
     "chart-secondary chart-tertiary"
     "social-stats social-stats"
