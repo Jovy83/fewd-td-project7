@@ -17,6 +17,10 @@
   margin-left: $spacing-extrasmall;
 }
 
+.alert {
+  color: $white;
+}
+
 .user-date {
   margin-left: auto;
 }
@@ -28,6 +32,12 @@
 .more {
   margin-left: auto;
   font-size: $size-more-text;
+}
+
+.close {
+  @extend %rounded;
+  color: $off-white;
+  font-weight: $weight-thick;
 }
 
 .text {

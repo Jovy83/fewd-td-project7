@@ -31,6 +31,15 @@
     }
   }
 
+  &--alert {
+    @extend %div-spacing;
+    @include flexy(row);
+    justify-content: space-between;
+    background-color: $color-primary;
+    padding: $spacing-small;
+    border-radius: $border-slightly-round-radius;
+  }
+
   &--chart-primary {
     @extend %div-spacing;
     @extend %div-border-bottom;
