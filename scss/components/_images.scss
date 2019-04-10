@@ -8,7 +8,13 @@
 .svg {
   &--icon {
     @extend %icon;
+    transition: opacity $duration-animation;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
+
   &--badge {
     @extend %social-icon;
     background: $color-primary;
@@ -17,5 +23,14 @@
     & path {
       fill: $white;
     }
+  }
+}
+
+.notification {
+  transition: transform $duration-animation;
+  transform-origin: 50% 50%;
+
+  &:hover {
+    transform: rotate(30deg);
   }
 }

@@ -721,6 +721,12 @@ canvas {
   }
 }
 
+.svg--icon {
+  transition: opacity 0.5s;
+}
+.svg--icon:hover {
+  opacity: 0.5;
+}
 .svg--badge {
   background: #7479BA;
   border-radius: 50%;
@@ -728,6 +734,14 @@ canvas {
 }
 .svg--badge path {
   fill: #fff;
+}
+
+.notification {
+  transition: transform 0.5s;
+  transform-origin: 50% 50%;
+}
+.notification:hover {
+  transform: rotate(30deg);
 }
 
 .nav-area {
