@@ -27,10 +27,24 @@
 }
 
 .notification {
+  @extend %icon;
   transition: transform $duration-animation;
-  transform-origin: 50% 50%;
+  transform-origin: top center;
 
   &:hover {
-    transform: rotate(30deg);
+    transform: rotateZ(30deg);
+    opacity: inherit;
   }
+}
+
+.notification-container {
+  position: relative;
+}
+
+.new {
+  @extend %rounded;
+  border: $border-new-notification-size solid $dark-sea-green;
+  position: absolute;
+  top: $position-notification-top;
+  right: $position-notification-right;
 }

@@ -60,7 +60,7 @@
   opacity: 0.8;
 }
 
-.svg--icon, .img--avatar {
+.notification, .svg--icon, .img--avatar {
   height: 2rem;
   width: 2rem;
 }
@@ -71,7 +71,7 @@
   padding: 1rem;
 }
 
-.close, .img--avatar {
+.close, .new, .img--avatar {
   border-radius: 50%;
 }
 
@@ -738,10 +738,22 @@ canvas {
 
 .notification {
   transition: transform 0.5s;
-  transform-origin: 50% 50%;
+  transform-origin: top center;
 }
 .notification:hover {
-  transform: rotate(30deg);
+  transform: rotateZ(30deg);
+  opacity: inherit;
+}
+
+.notification-container {
+  position: relative;
+}
+
+.new {
+  border: 0.35rem solid #91C694;
+  position: absolute;
+  top: -7%;
+  right: 15%;
 }
 
 .nav-area {
