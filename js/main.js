@@ -1,8 +1,18 @@
-// Chart.defaults.global.legend.display = false;
-
+// Variables
+////////////////////////////////////////////////////////////////////////////////////
 const chartMonthlyTrafficElement = $('#chart-monthly-traffic');
 const chartDailyTrafficElement = $('#chart-daily-traffic');
 const chartPlatformTrafficElement = $('#chart-platform-traffic');
+
+const emailNotificationsPrefs = $('#email-prefs');
+const profilePrefs = $('#profile-prefs');
+const timezonePrefs = $('#timezone-prefs');
+const savePrefsButton = $('button[name=save]');
+
+// Charts
+////////////////////////////////////////////////////////////////////////////////////
+
+// Chart.defaults.global.legend.display = false;
 
 const chartMonthlyTraffic = new Chart(chartMonthlyTrafficElement, {
   type: 'line',
@@ -75,4 +85,35 @@ const chartPlatformTraffic = new Chart(chartPlatformTrafficElement, {
   },
   options: {
   }
+});
+
+// Local storage
+////////////////////////////////////////////////////////////////////////////////////
+function supportsLocalStorage() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null;
+  } catch (e) {
+    return false
+  }
+}
+
+savePrefsButton.click(function() {
+  // check first if timezone is selected, if not, show alert
+  if(timezonePrefs.val() === null) {
+    alert('Please select timezone!');
+    return;
+  }
+
+  localStorage.emailPrefs = emailNotificationsPrefs.prop('checked');
+  localStorage.profilePrefs = profilePrefs.prop('checked');
+  localStorage.timezonePrefs = timezonePrefs.val();
+  console.log(`Successfully saved preferences to localStorage`);
+});
+
+// A $( document ).ready() block. This is fired when the page is completely loaded
+$(document).ready(function() {
+  // load the user settings from the localStorage
+  emailNotificationsPrefs.prop('checked', localStorage.emailPrefs);
+  console.log(localStorage.emailPrefs);
+  profilePrefs.prop('checked', localStorage.profilePrefs);
 });

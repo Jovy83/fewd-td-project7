@@ -333,7 +333,7 @@
               Send Email Notifications
             </strong>
             <label class="switch-light switch-ios form__label" onclick="">
-              <input type="checkbox">
+              <input id="email-prefs" type="checkbox">
               <span>
                 <span>Off</span>
                 <span>On</span>
@@ -345,7 +345,7 @@
           <div class="div--switch-container">
             <strong>Set Profile to Public</strong>
               <label class="switch-light switch-ios form__label" onclick="">
-                <input type="checkbox">
+                <input id="profile-prefs" type="checkbox">
                 <span>
                   <span>Off</span>
                   <span>On</span>
@@ -354,7 +354,7 @@
               </label>
           </div>
 
-          <select class="form__select" id="timezone" name="user_timezone">
+          <select id="timezone-prefs" class="form__select" name="user_timezone">
             <option value="" disabled selected>Select Timezone</option>
             <option value="GMT-7">Pacific</option>
             <option value="GMT-6">Mountain</option>
