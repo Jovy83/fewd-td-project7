@@ -9,6 +9,9 @@ const profilePrefs = $('#profile-prefs');
 const timezonePrefs = $('#timezone-prefs');
 const savePrefsButton = $('button[name=save]');
 
+const alertDiv = $('.div--alert');
+const closeAlertButton = $('.close');
+
 // Helper functions
 
 const convertStringToBoolean = string => {
@@ -93,6 +96,12 @@ const chartPlatformTraffic = new Chart(chartPlatformTrafficElement, {
   }
 });
 
+// Alert div
+////////////////////////////////////////////////////////////////////////////////////
+closeAlertButton.click( () => {
+  alertDiv.slideUp(1000); // 1 second
+});
+
 // Local storage
 ////////////////////////////////////////////////////////////////////////////////////
 function supportsLocalStorage() {
@@ -103,7 +112,7 @@ function supportsLocalStorage() {
   }
 }
 
-savePrefsButton.click(function() {
+savePrefsButton.click( () => {
   // check first if timezone is selected, if not, show alert
   if(timezonePrefs.val() === null) {
     alert('Please select timezone!');
@@ -117,7 +126,7 @@ savePrefsButton.click(function() {
 });
 
 // A $( document ).ready() block. This is fired when the page is completely loaded
-$(document).ready(function() {
+$(document).ready( ()=> {
   // load the user settings from the localStorage
   // we need to convert the string to boolean (for the sliders) first because localStorage stores data in strings.
   const emailSettings = convertStringToBoolean(localStorage.emailPrefs);
