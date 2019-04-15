@@ -9,6 +9,12 @@ const profilePrefs = $('#profile-prefs');
 const timezonePrefs = $('#timezone-prefs');
 const savePrefsButton = $('button[name=save]');
 
+// Helper functions
+
+const convertStringToBoolean = string => {
+  return (string === 'true')
+}
+
 // Charts
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -113,7 +119,12 @@ savePrefsButton.click(function() {
 // A $( document ).ready() block. This is fired when the page is completely loaded
 $(document).ready(function() {
   // load the user settings from the localStorage
-  emailNotificationsPrefs.prop('checked', localStorage.emailPrefs);
-  console.log(localStorage.emailPrefs);
-  profilePrefs.prop('checked', localStorage.profilePrefs);
+  // we need to convert the string to boolean (for the sliders) first because localStorage stores data in strings.
+  const emailSettings = convertStringToBoolean(localStorage.emailPrefs);
+  const profileSettings = convertStringToBoolean(localStorage.profilePrefs);
+  const timezoneSettings = localStorage.timezonePrefs;
+
+  emailNotificationsPrefs.prop('checked', emailSettings);
+  profilePrefs.prop('checked', profileSettings);
+  timezonePrefs.val(timezoneSettings).change();
 });
