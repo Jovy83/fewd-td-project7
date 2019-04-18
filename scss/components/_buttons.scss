@@ -13,3 +13,12 @@
     background: $color-tertiary;
   }
 }
+
+.no-border {
+  border: none;
+}
+
+.close-notification {
+  margin-left: $spacing-small;
+  border: none;
+}

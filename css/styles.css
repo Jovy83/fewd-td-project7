@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700");
-.ul--chart, .nav, .div--switch-container, .div--recent-activity, .div--new-member, .div--alert, .div--profile, .div--notification-and-profile {
+.ul--chart, .nav, .div--switch-container, .div--recent-activity, .div--new-member, .div--alert, .div--profile, .div--notification-entry, .div--notification-and-profile {
   display: flex;
   flex-direction: row;
 }
@@ -71,7 +71,7 @@
   padding: 1rem;
 }
 
-.close, .new, .img--avatar {
+.new, .img--avatar {
   border-radius: 50%;
 }
 
@@ -522,6 +522,15 @@ h4 {
   background: #91C694;
 }
 
+.no-border {
+  border: none;
+}
+
+.close-notification {
+  margin-left: 1rem;
+  border: none;
+}
+
 canvas {
   margin-bottom: 2rem;
 }
@@ -534,6 +543,26 @@ canvas {
   .div--notification-and-profile {
     justify-content: flex-end;
   }
+}
+.div--notification-popup {
+  display: none;
+  background-color: #fff;
+  border: 0.35rem solid #F5F5F5;
+  border-radius: 0.3125rem;
+  padding: 1rem;
+  position: absolute;
+  top: 8%;
+}
+.div--notification-entry {
+  justify-content: space-between;
+  border-bottom: 0.05rem solid #B2B2B2;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.div--notification-entry:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 .div--profile {
   align-items: center;

@@ -12,6 +12,9 @@ const savePrefsButton = $('button[name=save]');
 const alertDiv = $('.div--alert');
 const closeAlertButton = $('.close');
 
+const alertPopup = $('.div--notification-popup');
+const
+
 // Helper functions
 
 const convertStringToBoolean = string => {

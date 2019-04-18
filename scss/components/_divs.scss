@@ -9,6 +9,33 @@
     width: 95%;
   }
 
+// TODO: need to use buttons instead of anchors
+// TODO: figure out how to make the buttons work. 
+
+  &--notification-popup {
+    display: none; // will be hidden by default
+    background-color: $white;
+    border: $border-active-size solid $off-white;
+    border-radius: $border-slightly-round-radius;
+    padding: $spacing-small;
+    position: absolute;
+    top: 8%;
+  }
+
+  &--notification-entry {
+    @include flexy(row);
+    justify-content: space-between;
+    border-bottom: $border-separator-size solid $dark-gray;
+    padding-bottom: $spacing-small;
+    margin-bottom: $spacing-small;
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
   &--profile {
     @include flexy(row);
     @include media-query('tablet') {
