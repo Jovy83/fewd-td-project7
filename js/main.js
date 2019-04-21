@@ -14,6 +14,7 @@ const closeAlertButton = $('.close');
 
 const notificationPopupDiv = $('.div--notification-popup');
 const notificationButton = $('#notification-button');
+const greenNotificationIcon = $('.new');
 
 // Helper functions
 
@@ -102,6 +103,10 @@ const chartPlatformTraffic = new Chart(chartPlatformTrafficElement, {
 // Notifications
 ////////////////////////////////////////////////////////////////////////////////////
 notificationButton.click( () => {
+
+  // hide the green notification icon
+  greenNotificationIcon.css('display', 'none');
+
   if(notificationPopupDiv.css('display') === 'none') {
     notificationPopupDiv.css('display', 'grid');
   } else {
@@ -110,10 +115,14 @@ notificationButton.click( () => {
 });
 
 notificationPopupDiv.on('click', 'button', (event) => {
-  // TODO: figure out ohw to get the aprent div
   const closeNotificationButton = $(event.target);
-  const closeNotificationDiv = closeNotificationButton.parent();
-  console.log(closeNotificationDiv);
+
+  if(closeNotificationButton.attr('id') !== 'close-all-button') {
+    const closeNotificationDiv = closeNotificationButton.parent();
+    closeNotificationDiv.hide();
+  } else {
+    notificationPopupDiv.css('display', 'none');
+  }
 });
 
 // Alert div
