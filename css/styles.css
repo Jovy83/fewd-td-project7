@@ -75,6 +75,11 @@
   border-radius: 50%;
 }
 
+.notification-container, .close-notification {
+  border: none;
+  background: none;
+}
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -522,13 +527,12 @@ h4 {
   background: #91C694;
 }
 
-.no-border {
-  border: none;
-}
-
 .close-notification {
   margin-left: 1rem;
-  border: none;
+}
+
+.notification-container {
+  position: relative;
 }
 
 canvas {
@@ -772,10 +776,6 @@ canvas {
 .notification:hover {
   transform: rotateZ(30deg);
   opacity: inherit;
-}
-
-.notification-container {
-  position: relative;
 }
 
 .new {

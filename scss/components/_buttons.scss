@@ -14,11 +14,12 @@
   }
 }
 
-.no-border {
-  border: none;
+.close-notification {
+  @extend %no-border-button;
+  margin-left: $spacing-small;
 }
 
-.close-notification {
-  margin-left: $spacing-small;
-  border: none;
+.notification-container {
+  @extend %no-border-button;
+  position: relative;
 }

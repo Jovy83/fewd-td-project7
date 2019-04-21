@@ -80,3 +80,8 @@
 %rounded {
   border-radius: $border-rounded-radius;
 }
+
+%no-border-button {
+  border: none;
+  background: none;
+}

@@ -12,8 +12,8 @@ const savePrefsButton = $('button[name=save]');
 const alertDiv = $('.div--alert');
 const closeAlertButton = $('.close');
 
-const alertPopup = $('.div--notification-popup');
-const
+const notificationPopupDiv = $('.div--notification-popup');
+const notificationButton = $('#notification-button');
 
 // Helper functions
 
@@ -97,6 +97,23 @@ const chartPlatformTraffic = new Chart(chartPlatformTrafficElement, {
   },
   options: {
   }
+});
+
+// Notifications
+////////////////////////////////////////////////////////////////////////////////////
+notificationButton.click( () => {
+  if(notificationPopupDiv.css('display') === 'none') {
+    notificationPopupDiv.css('display', 'grid');
+  } else {
+    notificationPopupDiv.css('display', 'none');
+  }
+});
+
+notificationPopupDiv.on('click', 'button', (event) => {
+  // TODO: figure out ohw to get the aprent div
+  const closeNotificationButton = $(event.target);
+  const closeNotificationDiv = closeNotificationButton.parent();
+  console.log(closeNotificationDiv);
 });
 
 // Alert div

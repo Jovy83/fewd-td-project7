@@ -37,10 +37,6 @@
   }
 }
 
-.notification-container {
-  position: relative;
-}
-
 .new {
   @extend %rounded;
   border: $border-new-notification-size solid $dark-sea-green;
