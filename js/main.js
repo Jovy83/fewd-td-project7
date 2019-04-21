@@ -16,10 +16,23 @@ const notificationPopupDiv = $('.div--notification-popup');
 const notificationButton = $('#notification-button');
 const greenNotificationIcon = $('.new');
 
+const sendMessageButton = $('button[type=submit]');
+
 // Helper functions
 
 const convertStringToBoolean = string => {
   return (string === 'true')
+}
+
+const fieldsAreEmpty = () => {
+
+  const userField = $('#username');
+  const messageField = $('#message');
+
+  if (userField.val() === '' || messageField.val() === '') {
+    return true
+  }
+  return false
 }
 
 // Charts
@@ -130,6 +143,17 @@ notificationPopupDiv.on('click', 'button', (event) => {
 closeAlertButton.click( () => {
   alertDiv.slideUp(1000); // 1 second
 });
+
+// Send message button
+sendMessageButton.click( (event) => {
+  event.preventDefault();
+  if(fieldsAreEmpty()) {
+    alert('All fields must be filled out!')
+  } else {
+    alert('Message has been sent!')
+  }
+});
+////////////////////////////////////////////////////////////////////////////////////
 
 // Local storage
 ////////////////////////////////////////////////////////////////////////////////////
