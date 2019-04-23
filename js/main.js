@@ -18,6 +18,13 @@ const greenNotificationIcon = $('.new');
 
 const sendMessageButton = $('button[type=submit]');
 
+const userField = $('#username');
+const messageField = $('#message');
+
+const autoCompleteUl = $('#autocomplete-list');
+
+const users = ['Andy','Bill','Carrie','Dale','Dawn','Dan','Earnest','Fred','Gregory','Holly','Inigo','Jenny','Kenny','Libby','Mindy','Nikki','Onobe','Penny','Quinn','Randall','Sandy','Tom','Umbrasil','Victoria','Wendy','Xavier','Yvette','Zander'];
+
 // Helper functions
 
 const convertStringToBoolean = string => {
@@ -26,15 +33,18 @@ const convertStringToBoolean = string => {
 
 const fieldsAreEmpty = () => {
 
-  const userField = $('#username');
-  const messageField = $('#message');
-
   if (userField.val() === '' || messageField.val() === '') {
     return true
   }
   return false
 }
 
+const userContainsSearchString = (user, searchString) => {
+  if(user.includes(searchString)) {
+    return true;
+  }
+  return false;
+}
 // Charts
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -144,20 +154,40 @@ closeAlertButton.click( () => {
   alertDiv.slideUp(1000); // 1 second
 });
 
+// Autocomplete user
+////////////////////////////////////////////////////////////////////////////////////
+userField.on('keyup', (event) => {
+  const searchString = $(event.target).val().toLowerCase();
+
+//TODO: NEED TO DETECT IF BACKBUTTON WAS PRESSED
+// TODO: need to detect if the user is already in the UL to prevent duplicates
+
+  users.forEach((user) => {
+    // TODO: continue implementing autoconmplete. ask slack
+    if(userContainsSearchString(user, searchString)) {
+      // add the user to the unordered list
+      const newUl = $(`<li>${user}</li>`);
+      autoCompleteUl.append(newUl);
+    } else {
+      // remove the user from the unordered list
+    }
+  });
+});
+
 // Send message button
+////////////////////////////////////////////////////////////////////////////////////
 sendMessageButton.click( (event) => {
   event.preventDefault();
   if(fieldsAreEmpty()) {
-    alert('All fields must be filled out!')
+    alert('User and Message fields must be filled out before sending!')
   } else {
     alert('Message has been sent!')
   }
 });
-////////////////////////////////////////////////////////////////////////////////////
 
 // Local storage
 ////////////////////////////////////////////////////////////////////////////////////
-function supportsLocalStorage() {
+const supportsLocalStorage = () => {
   try {
     return 'localStorage' in window && window['localStorage'] !== null;
   } catch (e) {
